@@ -87,6 +87,7 @@
     }
     &-results{
         display: flex;
+        flex-direction: column;
         background-color: $basicColor;
         padding: 25px;
         border-radius: 5%;
