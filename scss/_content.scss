@@ -1,0 +1,116 @@
+@mixin bigTitle {
+    font-size: $bigSizeText;
+    line-height: 30px
+}
+@mixin title{
+    font-size: $smallSizeText;
+    line-height: 25px;
+}
+@mixin text {
+    font-size: $lightSizeText;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.calculator{
+    &__title{
+        @include bigTitle;
+        text-align: center;
+        color: $secondColor;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+    }
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &-body{
+        padding: 25px;
+        border-radius: 5%;
+        background-color: $basicColor;
+        margin: 10px;
+        &__content{
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: $lightColor;
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_title{
+                @include title;
+                margin: 10px;
+                text-align: center;
+            }
+            &_input {
+                margin-bottom: 10px;
+               & input {
+                   @include text;
+                    color: $secondColor;
+                    height: 30px;
+                    padding: 5px;
+            }
+            }
+            
+
+        }
+
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        background-color: $basicColor;
+        padding: 25px;
+        border-radius: 5%;
+        margin: 10px;
+        &__title{
+            @include title;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            color: $secondColor;
+        }
+        &__bank{
+            @include text;
+            margin-bottom: 20px;
+            display: flex;
+            padding: 10px;
+            background-color: $lightColor;
+            border-radius: 5%;
+            border: 1px solid $greyColor;
+            width: 100%;
+            &_name{
+                margin-right: 40px;
+            }              
+        }
+    }
+    &-results{
+        display: flex;
+        background-color: $basicColor;
+        padding: 25px;
+        border-radius: 5%;
+        margin: 10px;
+        &__item{
+            background-color: $lightColor;
+            padding: 25px;
+            border-radius: 5%;
+            border: 1px solid $greyColor;
+            margin: 5px;
+            text-align: center;
+            &-title{
+                @include title;
+            }
+            &-value{
+                @include text;
+                &_val{
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+}
+
+.active{
+    border: 2px solid $secondColor;
+}

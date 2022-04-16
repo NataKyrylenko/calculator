@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+            <h2 class="calculator__title">Mortgage Calculator</h2>
+            <div class="calculator__inner">
+            <div class="calculator-body">
+                <div class="calculator-body__content">
+                    <h4 class="calculator-body__content_title">Maximum loan</h4>
+                    <div class="calculator-body__content_input">
+                        <input id="cost" type="number" value="0">
+                    </div>
+                    <div class="calculator-body__content_input">
+                        <input id="cost-range" type="range" min="1000" max="10000000" class="input-range">
+                    </div>
+                </div>
+
+                <div class="calculator-body__content">
+                    <h4 class="calculator-body__content_title"> Minimum down payment</h4>
+                    <div class="calculator-body__content_input">
+                        <input class="calculator-body__content_pay" id="payment" type="number" value="0">
+                    </div>
+                    <div class="calculator-body__content_input">
+                        <input id="payment-range" type="range" min="1000" max="1000000" class="input-range">
+                    </div>
+                </div>
+
+                <div class="calculator-body__content">
+                    <h4 class="calculator-body__content_title">Loan term</h4>
+                    <div class="calculator-body__content_input">
+                        <input class="calculator-body__content_pay" id="loan-term" type="number" value="0">
+                    </div>
+                    <div class="calculator-body__content_input">
+                        <input id="loan-range" type="range" min="12" max="36" class="input-range">
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-content">
+                <h3 class="calculator-content__title">Banks</h3>
+                <button class="calculator-content__bank active" data-name="lite">
+                    <p class="calculator-content__bank_name">Lite-Bank</p>
+                    <p class="calculator-content__bank_value">8.4%</p>
+                </button>
+                <button class="calculator-content__bank" data-name="big">
+                    <p class="calculator-content__bank_name">Big-Bank</p>
+                    <p class="calculator-content__bank_value">8.7%</p>
+                </button>
+                <button class="calculator-content__bank" data-name="smile">
+                    <p class="calculator-content__bank_name">Smile-Bank</p>
+                    <p class="calculator-content__bank_value">7.9%</p>
+                </button>
+                <button class="calculator-content__bank" data-name="best">
+                    <p class="calculator-content__bank_name">Best-Bank</p>
+                    <p class="calculator-content__bank_value">9.2%</p>
+                </button>
+                <button class="calculator-content__bank" data-name="idea">
+                    <p class="calculator-content__bank_name">Idea-Bank</p>
+                    <p class="calculator-content__bank_value">7.7%</p>
+                </button>
+                <button class="calculator-content__bank" data-name="mono">
+                    <p class="calculator-content__bank_name">Mono-Bank</p>
+                    <p class="calculator-content__bank_value">8.1%</p>
+                </button>
+            </div>
+
+            <div class="calculator-results">
+                <div class="calculator-results__item">
+                    <h3 class="calculator-results__item-title">The amount of money</h3>
+                    <p class="calculator-results__item-value" id="amount-credit">0<span class="calculator-results__item-value_val">$</span></p>
+                </div>
+
+                <div class="calculator-results__item">
+                    <h3 class="calculator-results__item-title">Monthly payment</h3>
+                    <p class="calculator-results__item-value" id="montly-payment">0<span class="calculator-results__item-value_val">$</span></p>
+                </div>
+
+                <div class="calculator-results__item">
+                    <h3 class="calculator-results__item-title">Recommended income</h3>
+                    <p class="calculator-results__item-value" id="recomented-income">0<span class="calculator-results__item-value_val">$</span></p>
+                </div>
+            </div>
+        </div></div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
