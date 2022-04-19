@@ -49,11 +49,17 @@
 
             <div class="calculator-content">
                 <h3 class="calculator-content__title">Banks</h3>
-                <ul>
-                    <li class="calculator-content__bank active" data-name="lite">Lite-Bank <span class="calculator-content__bank_value">8.4%</span></li>
-                    <li class="calculator-content__bank" data-name="big">Big-Bank <span class="calculator-content__bank_value">8.7%</span></li>
-                    <li class="calculator-content__bank" data-name="idea">Idea-Bank <span class="calculator-content__bank_value">7.7%</span></li>
-                    <li class="calculator-content__bank" data-name="best">Best-Bank <span class="calculator-content__bank_value">8.1%</span></li>
+                <div class="calculator-content__add">
+                    <input class="calculator-content__add_bank" type="text" id="addinput" placeholder="Bank name"/>
+                    <input class="calculator-content__add_bank" type="number" id="addvalue" placeholder="%"/>
+                    <button class="calculator-content__add_btn" id="addBtn">Add</button>
+                </div>
+                
+                <ul id="banks">
+                    
+                    <li class="calculator-content__bank" data-name="big">Big-Bank <span class="calculator-content__bank_value">8.7%</span><button class="calculator-content__bank_btn">X</button></li>
+                    <li class="calculator-content__bank" data-name="idea">Idea-Bank <span class="calculator-content__bank_value">7.7%</span><button class="calculator-content__bank_btn">X</button></li>
+                    <li class="calculator-content__bank" data-name="best">Best-Bank <span class="calculator-content__bank_value">8.1%</span><button class="calculator-content__bank_btn">X</button></li>
                     
                 </ul>
                 

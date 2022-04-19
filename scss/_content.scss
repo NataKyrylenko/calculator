@@ -71,18 +71,39 @@
             letter-spacing: 2px;
             color: $secondColor;
         }
+        &__add{
+            display: flex;
+            flex-direction: column;
+            &_bank{
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid $greyColor;
+            }
+            &_btn{
+                @include text;
+                border-radius: 5px;
+                border: 1px solid $greyColor;
+                background-color: $greyColor;
+            }
+        }
         &__bank{
             @include text;
-            margin-bottom: 20px;
+            margin: 15px 0;
             display: flex;
+            justify-content: space-around;
+            align-items: center;
             padding: 10px;
             background-color: $lightColor;
             border-radius: 5%;
             border: 1px solid $greyColor;
             width: 100%;
-            &_name{
-                margin-right: 40px;
-            }              
+            &_value{
+                margin: 0 20px;
+            } 
+            &_btn{
+                padding: 5px;
+                @include text;
+            }             
         }
     }
     &-results{

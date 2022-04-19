@@ -97,22 +97,55 @@ body {
   letter-spacing: 2px;
   color: #cf0000;
 }
+.calculator-content__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.calculator-content__add_bank {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #acacac;
+}
+.calculator-content__add_btn {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #acacac;
+  background-color: #acacac;
+}
 .calculator-content__bank {
   font-size: 16px;
   line-height: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   background-color: white;
   border-radius: 5%;
   border: 1px solid #acacac;
   width: 100%;
 }
-.calculator-content__bank_name {
-  margin-right: 40px;
+.calculator-content__bank_value {
+  margin: 0 20px;
+}
+.calculator-content__bank_btn {
+  padding: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
 }
 .calculator-results {
   display: -webkit-box;

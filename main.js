@@ -14,6 +14,11 @@ const inputsRange = document.querySelectorAll('.input-range');
 
 const banksBtn = document.querySelectorAll('.calculator-content__bank');
 
+const addinput = document.getElementById('addinput');
+const addvalue = document.getElementById('addvalue');
+const addBtn = document.getElementById('addBtn');
+const allBanks = document.getElementById('banks');
+
 const assignValue = () => {
     totalCost.value = сostRange.value;
     payment.value = paymentRange.value;
@@ -22,16 +27,8 @@ const assignValue = () => {
 assignValue();
 const banks = [
     {
-        name:'lite',
-        precents: 8.4
-    },
-    {
         name:'big',
         precents: 8.7
-    },
-    {
-        name:'smile',
-        precents: 7.9
     },
     {
         name:'best',
@@ -41,10 +38,7 @@ const banks = [
         name:'idea',
         precents: 7.7
     },
-    {
-        name:'mono',
-        precents: 8.1
-    },
+    
 ]
 
 let currentPrecent = banks[0].precents;
@@ -59,7 +53,45 @@ for (let bank of banksBtn){
         takeActiveBank(bank)
     })
 }
+//////////////////////////////////////////////////
+addBtn.addEventListener('click', (e) => {
+    
+    if (addinput.value === '' && addvalue.value === '') return
+    createDeleteElements(addinput.value, addvalue.value)   
+    addinput.value = ``; 
+    addvalue.value = ``;
 
+    
+})
+
+function createDeleteElements(value) {
+    
+    const list = document.createElement('li')
+    const btn = document.createElement('button')
+    const valuePrecent = document.createElement('span')
+
+    list.className = 'calculator-content__bank';
+    list.textContent = value
+    allBanks.appendChild(list)
+
+    valuePrecent.className = 'calculator-content__bank_value';
+    valuePrecent.textContent = `${addvalue.value} %`
+    list.appendChild(valuePrecent)
+
+    btn.className = 'calculator-content__bank_btn';
+    btn.textContent = "X"
+    list.appendChild(btn)
+
+    btn.addEventListener('click', (e) => {
+        allBanks.removeChild(list)
+    })
+}
+
+
+
+
+
+/////////////////////////////////////////////////
 const takeActiveBank = currentActive => {
     const dataAttrValue = currentActive.dataset.name;
     const currentBank= banks.find(bank => bank.name ===dataAttrValue);
